@@ -1,61 +1,59 @@
-// Main JS for Boreddy Landing Page - Dual Theme Support
-
+// Main JS for Boreddy 2026 Redesign
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- 1. Theme Switching Logic ---
+    // --- 1. Navigation & Theme Toggle ---
     const themeToggle = document.getElementById('theme-toggle');
-    const currentTheme = localStorage.getItem('theme') || 'light';
+    const sunIcon = themeToggle.querySelector('.icon-sun');
+    const moonIcon = themeToggle.querySelector('.icon-moon');
+    const currentTheme = localStorage.getItem('theme') || 'dark'; // Defaulting to dark for premium feel
 
-    // Set initial theme
-    if (currentTheme === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'dark');
-    } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-    }
-
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            let theme = document.documentElement.getAttribute('data-theme');
-            if (theme === 'dark') {
-                document.documentElement.setAttribute('data-theme', 'light');
-                localStorage.setItem('theme', 'light');
-            } else {
-                document.documentElement.setAttribute('data-theme', 'dark');
-                localStorage.setItem('theme', 'dark');
-            }
-        });
-    }
-
-    // --- 2. Scroll Reveal Animation ---
-    const reveals = document.querySelectorAll('.reveal');
-    
-    const revealOnScroll = () => {
-        reveals.forEach(reveal => {
-            const windowHeight = window.innerHeight;
-            const revealTop = reveal.getBoundingClientRect().top;
-            const revealPoint = 150;
-
-            if (revealTop < windowHeight - revealPoint) {
-                reveal.classList.add('active');
-            }
-        });
+    const setTheme = (theme) => {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        if (theme === 'dark') {
+            sunIcon.style.display = 'block';
+            moonIcon.style.display = 'none';
+        } else {
+            sunIcon.style.display = 'none';
+            moonIcon.style.display = 'block';
+        }
     };
 
-    window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll(); // Trigger once on load
+    setTheme(currentTheme);
 
-    // --- 3. Navbar Scrolled State ---
+    themeToggle.addEventListener('click', () => {
+        const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        setTheme(theme);
+    });
+
+    // --- 2. Navbar Scroll Effect ---
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.style.background = 'var(--glass-bg)';
-            navbar.style.backdropFilter = 'blur(12px)';
-            navbar.style.borderBottom = '1px solid var(--border-color)';
+        if (window.scrollY > 100) {
+            navbar.classList.add('scrolled');
         } else {
-            navbar.style.background = 'transparent';
-            navbar.style.backdropFilter = 'none';
-            navbar.style.borderBottom = 'none';
+            navbar.classList.remove('scrolled');
         }
+    });
+
+    // --- 3. Cinematic Reveal Animation ---
+    const reveals = document.querySelectorAll('.reveal');
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                revealObserver.unobserve(entry.target); // Reveal only once for cinematic feel
+            }
+        });
+    }, observerOptions);
+
+    reveals.forEach(reveal => {
+        revealObserver.observe(reveal);
     });
 
     // --- 4. Smooth Anchor Scrolling ---
@@ -64,22 +62,16 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+                const navHeight = navbar.offsetHeight;
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
                 });
             }
         });
     });
 
-    // --- 5. Mobile Menu Toggle ---
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navLinks = document.querySelector('.nav-links');
-
-    if (mobileMenu) {
-        mobileMenu.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-        });
-    }
+    // --- 5. Interactive Magnetic Elements (Optional/Progressive) ---
+    // Could add more JS here for mouse-following effects or grain motion.
 });

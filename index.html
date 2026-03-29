@@ -3,252 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boreddy | Intelligent Data Solutions & High-Performance Architecture</title>
-    <meta name="description" content="Boreddy specializes in high-performance scalable systems, big data strategy, and premium cloud-native architecture. Transforming data into strategic assets.">
+    <title>Boreddy | High-Performance Data Architecture & Strategy</title>
+    <meta name="description" content="State-of-the-art data engineering, cloud-native architecture, and strategic digital solutions for the modern enterprise.">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Outfit:wght@300;400;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar glass">
-        <div class="nav-container">
+    <nav class="navbar">
+        <div class="container nav-container">
             <div class="logo">
-                <span>Boreddy</span>
+                <a href="#" style="text-decoration: none; color: inherit;">boreddy<span>.</span></a>
             </div>
             <ul class="nav-links">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Work</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
                 <li><a href="#contact" class="btn-primary">Connect</a></li>
-                <li class="theme-switch-wrapper">
-                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                <li>
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
                         <span class="icon-sun">☀️</span>
-                        <span class="icon-moon">🌙</span>
+                        <span class="icon-moon" style="display:none">🌙</span>
                     </button>
                 </li>
             </ul>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-visual">
-            <div class="glow-sphere"></div>
-            <div class="data-grid-bg"></div>
-        </div>
-        <div class="container hero-content">
-            <div class="hero-text-block">
-                <div class="tag-line fade-in">High-Performance Data Architecture</div>
-                <h1 class="fade-in">Designing the <span class="highlight">Future</span> of Data Strategy.</h1>
-                <p class="fade-in delay-1">Scaling global operations with high-performance systems and intelligent cloud-native insights. Built for the modern enterprise.</p>
-                <div class="hero-btns fade-in delay-2">
-                    <a href="#projects" class="btn-primary">Explore Our Work</a>
-                    <a href="#contact" class="btn-outline">Expert Consultation</a>
+    <main>
+        <!-- Cinematic Hero -->
+        <section class="hero container">
+            <div class="hero-content">
+                <span class="tagline reveal">Data Architecture Specialists</span>
+                <h1 class="reveal delay-1">Designing the <span class="highlight">Future</span> of Data Strategy.</h1>
+                <p class="hero-desc reveal delay-2">We build high-performance, cloud-native ecosystems that transform complex data into your most valuable strategic asset.</p>
+                <div class="hero-btns reveal delay-3">
+                    <a href="#work" class="btn-primary">View Portfolio</a>
+                    <a href="#contact" class="btn-outline">Consultation</a>
                 </div>
             </div>
-        </div>
-        <div class="scroll-down">
-            <div class="mouse"></div>
-        </div>
-    </header>
+        </section>
 
-    <!-- Stats Section -->
-    <section class="stats container">
-        <div class="stat-card glass reveal">
-            <h3>AWS</h3>
-            <p>Certified Data Engineering</p>
-        </div>
-        <div class="stat-card glass reveal">
-            <h3>Databricks</h3>
-            <p>Certified Spark Developer</p>
-        </div>
-        <div class="stat-card glass reveal">
-            <h3>NoSQL</h3>
-            <p>Cloud Native Expertise</p>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services container">
-        <div class="section-title reveal">
-            <h2>Our Core Expertise</h2>
-            <div class="divider"></div>
-        </div>
-        <div class="services-grid">
-            <div class="service-card glass-card reveal">
-                <div class="service-icon">⚡</div>
-                <h3>Data Engineering</h3>
-                <p>Building robust, scalable pipelines that transform raw data into a strategic asset.</p>
-            </div>
-            <div class="service-card glass-card reveal">
-                <div class="service-icon">🌐</div>
-                <h3>Cloud Migration</h3>
-                <p>Seamless transition to AWS and Azure environments with zero-downtime architectures.</p>
-            </div>
-            <div class="service-card glass-card reveal">
-                <div class="service-icon">🧠</div>
-                <h3>R&D Analytics</h3>
-                <p>Applying decision-theory frameworks to solve complex organizational challenges.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about container">
-        <div class="about-grid">
-            <div class="about-content reveal">
-                <div class="tag-line">Our Philosophy</div>
-                <h2>Designing the Architecture of Tomorrow.</h2>
-                <p>Boreddy was founded on a simple principle: Data is the modern architect's most powerful tool. We don't just build systems; we design high-performance, scalable ecosystems that empower global operations. Our approach blends rigorous engineering with visionary technology strategy.</p>
-                <div class="about-stats">
-                    <div class="about-stat-item">
-                        <span class="stat-num">10+</span>
-                        <span class="stat-label">Years Expertise</span>
-                    </div>
-                    <div class="about-stat-item">
-                        <span class="stat-num">50+</span>
-                        <span class="stat-label">Projects Scaled</span>
+        <!-- Asymmetrical About -->
+        <section id="about" class="about container">
+            <div class="about-grid">
+                <div class="about-visual reveal">
+                    <div class="visual-pattern"></div>
+                    <!-- The hero_bg.png will be used as a background layer in CSS or just as a visual reference here -->
+                    <div style="background-image: url('assets/hero_bg.png'); background-size: cover; width: 100%; height: 100%; opacity: 0.15; filter: grayscale(1);"></div>
+                </div>
+                <div class="about-content reveal delay-1">
+                    <span class="tagline">Our Philosophy</span>
+                    <h2>Clarity through <span class="highlight">Complexity</span>.</h2>
+                    <p>At Boreddy, we believe that the most sophisticated systems should feel effortless. We blend rigorous data engineering with visionary architecture to scale global operations.</p>
+                    <div class="stat-grid">
+                        <div class="stat-item">
+                            <h3>10+</h3>
+                            <p>Years Excellence</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>50+</h3>
+                            <p>Enterprise Scaled</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="about-visual reveal">
-                <div class="about-glow"></div>
-                <!-- Abstract visual placeholder -->
-                <div class="abstract-shape">
-                    <div class="shape-inner"></div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Featured Projects -->
-    <section id="projects" class="projects-section">
-        <div class="container">
-            <div class="section-title reveal">
-                <h2>Proven Solutions</h2>
-                <div class="divider"></div>
+        <!-- Modular Work (Bento Grid) -->
+        <section id="work" class="projects container">
+            <div class="projects-header reveal">
+                <span class="tagline">Selected Work</span>
+                <h2>Proven <span class="highlight">Architectures</span>.</h2>
             </div>
-            <div class="projects-grid">
-                <!-- Project 1: ChoiceBase -->
-                <div class="project-card reveal">
-                    <div class="project-img-wrapper" style="background: linear-gradient(135deg, #1a1f25, #34495e);">
-                        <div class="placeholder-pattern" style="background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.1) 1px, transparent 0); background-size: 20px 20px;"></div>
-                    </div>
-                    <div class="project-info">
+            <div class="bento-grid">
+                <!-- ChoiceBase -->
+                <a href="https://choicebase.github.io/" target="_blank" class="project-card card-large reveal">
+                    <div>
+                        <span class="project-category">Strategic Analytics</span>
                         <h3>ChoiceBase</h3>
-                        <p>A strategic decision-making framework designed to model complex choices and optimize organizational outcomes through predictive analytics.</p>
-                        <div class="project-tags">
-                            <span>Decision Theory</span>
-                            <span>Web App</span>
-                            <span>Analytics</span>
-                        </div>
-                        <a href="https://choicebase.github.io/" target="_blank" class="project-link">Launch Project →</a>
+                        <p>Predictive decision-making framework for modeling organizational choices.</p>
                     </div>
-                </div>
+                    <div class="visual-pattern" style="bottom: 0px; top: auto; height: 150px; background: linear-gradient(0deg, var(--accent-primary) 0%, transparent 100%); opacity: 0.05;"></div>
+                </a>
 
-                <!-- Project 2: PyConnector -->
-                <div class="project-card reveal">
-                    <div class="project-img-wrapper" style="background: linear-gradient(135deg, #0f172a, #1e293b);">
-                        <div class="placeholder-pattern" style="background-image: linear-gradient(45deg, rgba(255,255,255,0.05) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0.05) 75%, transparent 75%, transparent); background-size: 40px 40px;"></div>
-                    </div>
-                    <div class="project-info">
-                        <h3>PyConnector</h3>
-                        <p>High-performance Python library for seamless cloud-native data integration, enabling low-latency connectivity across distributed systems.</p>
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>PyPI</span>
-                            <span>Cloud Native</span>
-                        </div>
-                        <a href="https://pypi.org/project/pyconnector/" target="_blank" class="project-link">View on PyPI →</a>
-                    </div>
-                </div>
+                <!-- PyConnector -->
+                <a href="https://pypi.org/project/pyconnector/" target="_blank" class="project-card reveal">
+                    <span class="project-category">Data Engine</span>
+                    <h3>PyConnector</h3>
+                    <p>Low-latency Python library for cloud-native integration.</p>
+                </a>
 
-                <!-- Project 3: My Cheat Sheets -->
-                <div class="project-card reveal">
-                    <div class="project-img-wrapper" style="background: linear-gradient(135deg, #001f3f, #0074d9);">
-                        <div class="placeholder-pattern" style="background-image: repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(255,255,255,0.05) 20px); background-size: 100% 20px;"></div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Dev Reference</h3>
-                        <p>A curated collection of high-density technical cheat sheets and documentation optimized for rapid developer onboarding and reference.</p>
-                        <div class="project-tags">
-                            <span>Documentation</span>
-                            <span>Open Source</span>
-                            <span>Engineering</span>
-                        </div>
-                        <a href="https://my-cheat-sheets.github.io/" target="_blank" class="project-link">Browse Library →</a>
-                    </div>
-                </div>
+                <!-- Dev Reference -->
+                <a href="https://my-cheat-sheets.github.io/" target="_blank" class="project-card reveal">
+                    <span class="project-category">Knowledge Base</span>
+                    <h3>Dev Reference</h3>
+                    <p>Curated high-density technical documentation for engineers.</p>
+                </a>
 
-                <!-- Project 4: My Home Kitchen -->
-                <div class="project-card reveal">
-                    <div class="project-img-wrapper" style="background: linear-gradient(135deg, #1d2b1d, #2d5a27);">
-                        <div class="placeholder-pattern" style="background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 15px 15px;"></div>
-                    </div>
-                    <div class="project-info">
+                <!-- Kitchen OS -->
+                <a href="https://myhomekitchen.github.io/" target="_blank" class="project-card card-wide reveal">
+                    <div>
+                        <span class="project-category">Utility OS</span>
                         <h3>Kitchen OS</h3>
-                        <p>An intelligent inventory management system for home tracking, bridging the gap between digital cataloging and physical asset management.</p>
-                        <div class="project-tags">
-                            <span>Utility</span>
-                            <span>Inventory</span>
-                            <span>Web App</span>
-                        </div>
-                        <a href="https://myhomekitchen.github.io/" target="_blank" class="project-link">Explore App →</a>
+                        <p>Intelligent inventory and physical asset management system.</p>
                     </div>
-                </div>
+                </a>
 
-                <!-- Project 5: BR Infinity -->
-                <div class="project-card reveal">
-                    <div class="project-img-wrapper" style="background: linear-gradient(135deg, #0b0b0b, #2c3e50);">
-                        <div class="placeholder-pattern" style="background-image: conic-gradient(from 0deg at 50% 50%, rgba(255,255,255,0.02) 0deg, transparent 90deg); background-size: 50px 50px;"></div>
-                    </div>
-                    <div class="project-info">
-                        <h3>BR Infinity</h3>
-                        <p>A flagship technology blog providing deep-dive insights into the latest enterprise trends, cloud architecture, and data strategy.</p>
-                        <div class="project-tags">
-                            <span>Insights</span>
-                            <span>Strategy</span>
-                            <span>Technology</span>
-                        </div>
-                        <a href="https://br-galaxy.blogspot.com/" target="_blank" class="project-link">Read Blog →</a>
-                    </div>
-                </div>
+                <!-- BR Infinity -->
+                <a href="https://br-galaxy.blogspot.com/" target="_blank" class="project-card reveal">
+                    <span class="project-category">Insights</span>
+                    <h3>BR Infinity</h3>
+                    <p>Flagship tech blog exploring enterprise strategy and cloud trends.</p>
+                </a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact & Footer -->
-    <footer id="contact" class="footer">
-        <div class="container footer-content">
-            <div class="footer-cta reveal">
-                <div class="tag-line">Get in Touch</div>
-                <h2>Ready to Scale?</h2>
-                <p>Let's design your data future together. Reach out for expert consultation.</p>
-                <div class="contact-email">
-                    <a href="mailto:hello@boreddy.com" class="email-link">hello@boreddy.com</a>
+        <!-- Authoritative Footer -->
+        <footer id="contact" class="footer container">
+            <div class="footer-main">
+                <div class="footer-hero reveal">
+                    <span class="tagline">Ready to Build?</span>
+                    <h2>Let's Design the <span class="highlight">Future</span>.</h2>
+                    <a href="mailto:hello@boreddy.com" class="btn-primary">hello@boreddy.com</a>
                 </div>
-                <a href="mailto:hello@boreddy.com" class="btn-primary">Connect with Us</a>
-            </div>
-            <div class="footer-bottom glass">
-                <div class="footer-logo">Boreddy <span class="logo-accent">.</span></div>
-                <p>&copy; 2026 Boreddy. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="#">Privacy</a>
-                    <a href="#">Terms</a>
-                    <a href="https://rvakr.github.io" target="_blank">Portfolio</a>
+                <div class="footer-links reveal delay-1">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#work">Work</a></li>
+                        <li><a href="https://rvakr.github.io" target="_blank">Portfolio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links reveal delay-2">
+                    <h4>Socials</h4>
+                    <ul>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </footer>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Boreddy Co. Crafted for Performance.</p>
+                <div style="display: flex; gap: 2rem;">
+                    <a href="#" style="color: inherit; text-decoration: none;">Privacy</a>
+                    <a href="#" style="color: inherit; text-decoration: none;">Terms</a>
+                </div>
+            </div>
+        </footer>
+    </main>
 
     <script src="main.js"></script>
 </body>
