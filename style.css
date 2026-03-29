@@ -68,6 +68,10 @@ body::before {
     padding: 0 4rem;
 }
 
+@media (max-width: 768px) {
+    .container { padding: 0 1.5rem; }
+}
+
 /* Typography Refinement */
 h1, h2, h3 {
     font-family: var(--font-heading);
@@ -317,6 +321,17 @@ h1, h2, h3 {
     border-color: var(--accent-primary);
 }
 
+.nav-links .btn-primary {
+    color: #ffffff !important;
+    background: var(--accent-primary);
+    padding: 0.8rem 2rem;
+}
+
+[data-theme='dark'] .nav-links .btn-primary {
+    background: var(--accent-primary);
+    color: #ffffff !important;
+}
+
 .card-large { grid-column: span 2; grid-row: span 2; }
 .card-wide { grid-column: span 2; }
 
@@ -408,15 +423,21 @@ h1, h2, h3 {
 }
 
 @media (max-width: 900px) {
-    .about-grid { grid-template-columns: 1fr; }
+    .about-grid { grid-template-columns: 1fr; gap: 4rem; text-align: center; }
     .footer-main { grid-template-columns: 1fr; gap: 4rem; }
     .nav-links { display: none; }
-    .hero h1 { font-size: 4rem; }
-    .footer-hero h2 { font-size: 3rem; }
+    .hero h1 { font-size: 3.5rem; }
+    .footer-hero h2 { font-size: 2.8rem; }
 }
 
 @media (max-width: 600px) {
+    .nav-container { padding: 0 1.5rem; }
+    .hero h1 { font-size: 2.8rem; }
+    .hero-desc { font-size: 1.1rem; }
+    .hero-btns { flex-direction: column; width: 100%; }
+    .btn-primary, .btn-outline { width: 100%; text-align: center; }
     .bento-grid { grid-template-columns: 1fr; }
     .card-large, .card-wide { grid-column: span 1; grid-row: span 1; }
-    .hero h1 { font-size: 3rem; }
+    .stat-num { font-size: 2.5rem; }
+    .footer-bottom { flex-direction: column; gap: 2rem; text-align: center; }
 }
